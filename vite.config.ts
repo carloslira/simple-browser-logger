@@ -23,5 +23,10 @@ export default defineConfig({
       entry: path.resolve(__dirname, './src/index.ts'),
       fileName: (format) => `index.${format}.js`,
     },
+    rollupOptions: {
+      output: {
+        exports: 'named',
+      },
+    },
   },
 });
